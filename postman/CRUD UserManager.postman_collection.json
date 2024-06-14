@@ -1,0 +1,686 @@
+{
+	"info": {
+		"_postman_id": "c22b301b-7cb5-4723-8f85-20853a198da1",
+		"name": "CRUD UserManager",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17851754",
+		"_collection_link": "https://martian-satellite-619817.postman.co/workspace/My-Workspace~f59f162b-338a-4fa9-8ed7-889d2df92698/collection/17851754-c22b301b-7cb5-4723-8f85-20853a198da1?action=share&source=collection_link&creator=17851754"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Get All",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkIjoiZjJhMTIzYzktYmQxMi00MDRjLTgzYzctODNlMzg3MmFiNzZlIiwibmFtZSI6InMzYmFuayIsImNyZWF0ZWRCeSI6InNwYXJrLXRlYW0ifSwiY2xpZW50SWQiOiJmMmExMjNjOS1iZDEyLTQwNGMtODNjNy04M2UzODcyYWI3NmUiLCJwZXJtaXNzaW9ucyI6W3siY3JlYXRlZEF0IjoiMjAyMC0wNy0yM1QxNjoyODo0Mi44MTJaIiwidXBkYXRlZEF0IjoiMjAyMC0wNy0yM1QxNjoyODo0Mi44MTJaIiwiYWxsb3dlZCI6WyJnZXQiLCJwb3N0IiwicGF0Y2giLCJkZWxldGUiLCJvcHRpb25zIl0sInJlc291cmNlcyI6WyJhY2NvdW50cyIsImFjY291bnRzLyoiLCJwYXltZW50LWFjY291bnRzIiwicGF5bWVudC1hY2NvdW50cy8qIiwicGF5bWVudC1jYXJkcyIsInBheW1lbnQtY2FyZHMvKiIsInBheW1lbnQtbWV0aG9kcyIsInBheW1lbnQtbWV0aG9kcy8qIiwicHJpdmF0ZS1sYWJlbC1hY2NvdW50cyIsInByaXZhdGUtbGFiZWwtYWNjb3VudHMvKiIsInRyYW5zYWN0aW9ucyIsInRyYW5zYWN0aW9ucy8qIiwiYXV0aG9yaXplcnMiLCJhdXRob3JpemVycy8qIl19LHsiY3JlYXRlZEF0IjoiMjAyMC0wNy0yM1QxNjoyODo0Mi44MTJaIiwidXBkYXRlZEF0IjoiMjAyMC0wNy0yM1QxNjoyODo0Mi44MTJaIiwiZGVuaWVkIjpbInBvc3QiXSwicmVzb3VyY2VzIjpbInVzZXJzLzppZC9jaGFuZ2UtcGFzc3dvcmQiXX1dLCJpYXQiOjE2NTcxMTYxNzEsImV4cCI6MTY1NzIwMjU3MSwic3ViIjoiZjJhMTIzYzktYmQxMi00MDRjLTgzYzctODNlMzg3MmFiNzZlIn0.xId4BoDU5JwkIi3fc1eMnTPfTAHTcot2v2mPKEWwNNg"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:44340/api/Users",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44340",
+							"path": [
+								"api",
+								"Users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get ID",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkIjoiZjJhMTIzYzktYmQxMi00MDRjLTgzYzctODNlMzg3MmFiNzZlIiwibmFtZSI6InMzYmFuayIsImNyZWF0ZWRCeSI6InNwYXJrLXRlYW0ifSwiY2xpZW50SWQiOiJmMmExMjNjOS1iZDEyLTQwNGMtODNjNy04M2UzODcyYWI3NmUiLCJwZXJtaXNzaW9ucyI6W3siY3JlYXRlZEF0IjoiMjAyMC0wNy0yM1QxNjoyODo0Mi44MTJaIiwidXBkYXRlZEF0IjoiMjAyMC0wNy0yM1QxNjoyODo0Mi44MTJaIiwiYWxsb3dlZCI6WyJnZXQiLCJwb3N0IiwicGF0Y2giLCJkZWxldGUiLCJvcHRpb25zIl0sInJlc291cmNlcyI6WyJhY2NvdW50cyIsImFjY291bnRzLyoiLCJwYXltZW50LWFjY291bnRzIiwicGF5bWVudC1hY2NvdW50cy8qIiwicGF5bWVudC1jYXJkcyIsInBheW1lbnQtY2FyZHMvKiIsInBheW1lbnQtbWV0aG9kcyIsInBheW1lbnQtbWV0aG9kcy8qIiwicHJpdmF0ZS1sYWJlbC1hY2NvdW50cyIsInByaXZhdGUtbGFiZWwtYWNjb3VudHMvKiIsInRyYW5zYWN0aW9ucyIsInRyYW5zYWN0aW9ucy8qIiwiYXV0aG9yaXplcnMiLCJhdXRob3JpemVycy8qIl19LHsiY3JlYXRlZEF0IjoiMjAyMC0wNy0yM1QxNjoyODo0Mi44MTJaIiwidXBkYXRlZEF0IjoiMjAyMC0wNy0yM1QxNjoyODo0Mi44MTJaIiwiZGVuaWVkIjpbInBvc3QiXSwicmVzb3VyY2VzIjpbInVzZXJzLzppZC9jaGFuZ2UtcGFzc3dvcmQiXX1dLCJpYXQiOjE2NTcxMTYxNzEsImV4cCI6MTY1NzIwMjU3MSwic3ViIjoiZjJhMTIzYzktYmQxMi00MDRjLTgzYzctODNlMzg3MmFiNzZlIn0.xId4BoDU5JwkIi3fc1eMnTPfTAHTcot2v2mPKEWwNNg"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:44340/api/Users/5",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44340",
+							"path": [
+								"api",
+								"Users",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkIjoiZjJhMTIzYzktYmQxMi00MDRjLTgzYzctODNlMzg3MmFiNzZlIiwibmFtZSI6InMzYmFuayIsImNyZWF0ZWRCeSI6InNwYXJrLXRlYW0ifSwiY2xpZW50SWQiOiJmMmExMjNjOS1iZDEyLTQwNGMtODNjNy04M2UzODcyYWI3NmUiLCJwZXJtaXNzaW9ucyI6W3siY3JlYXRlZEF0IjoiMjAyMC0wNy0yM1QxNjoyODo0Mi44MTJaIiwidXBkYXRlZEF0IjoiMjAyMC0wNy0yM1QxNjoyODo0Mi44MTJaIiwiYWxsb3dlZCI6WyJnZXQiLCJwb3N0IiwicGF0Y2giLCJkZWxldGUiLCJvcHRpb25zIl0sInJlc291cmNlcyI6WyJhY2NvdW50cyIsImFjY291bnRzLyoiLCJwYXltZW50LWFjY291bnRzIiwicGF5bWVudC1hY2NvdW50cy8qIiwicGF5bWVudC1jYXJkcyIsInBheW1lbnQtY2FyZHMvKiIsInBheW1lbnQtbWV0aG9kcyIsInBheW1lbnQtbWV0aG9kcy8qIiwicHJpdmF0ZS1sYWJlbC1hY2NvdW50cyIsInByaXZhdGUtbGFiZWwtYWNjb3VudHMvKiIsInRyYW5zYWN0aW9ucyIsInRyYW5zYWN0aW9ucy8qIiwiYXV0aG9yaXplcnMiLCJhdXRob3JpemVycy8qIl19LHsiY3JlYXRlZEF0IjoiMjAyMC0wNy0yM1QxNjoyODo0Mi44MTJaIiwidXBkYXRlZEF0IjoiMjAyMC0wNy0yM1QxNjoyODo0Mi44MTJaIiwiZGVuaWVkIjpbInBvc3QiXSwicmVzb3VyY2VzIjpbInVzZXJzLzppZC9jaGFuZ2UtcGFzc3dvcmQiXX1dLCJpYXQiOjE2NTcxMTYxNzEsImV4cCI6MTY1NzIwMjU3MSwic3ViIjoiZjJhMTIzYzktYmQxMi00MDRjLTgzYzctODNlMzg3MmFiNzZlIn0.xId4BoDU5JwkIi3fc1eMnTPfTAHTcot2v2mPKEWwNNg"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 2,\r\n  \"nome\": \"teste\",\r\n  \"email\": \"email@email.com\",\r\n  \"password\": \"Senha123\",\r\n  \"dataNascimento\": \"1990-01-01T00:00:00\",\r\n  \"sexo\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44340/api/Users/2",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44340",
+							"path": [
+								"api",
+								"Users",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkIjoiZjJhMTIzYzktYmQxMi00MDRjLTgzYzctODNlMzg3MmFiNzZlIiwibmFtZSI6InMzYmFuayIsImNyZWF0ZWRCeSI6InNwYXJrLXRlYW0ifSwiY2xpZW50SWQiOiJmMmExMjNjOS1iZDEyLTQwNGMtODNjNy04M2UzODcyYWI3NmUiLCJwZXJtaXNzaW9ucyI6W3siY3JlYXRlZEF0IjoiMjAyMC0wNy0yM1QxNjoyODo0Mi44MTJaIiwidXBkYXRlZEF0IjoiMjAyMC0wNy0yM1QxNjoyODo0Mi44MTJaIiwiYWxsb3dlZCI6WyJnZXQiLCJwb3N0IiwicGF0Y2giLCJkZWxldGUiLCJvcHRpb25zIl0sInJlc291cmNlcyI6WyJhY2NvdW50cyIsImFjY291bnRzLyoiLCJwYXltZW50LWFjY291bnRzIiwicGF5bWVudC1hY2NvdW50cy8qIiwicGF5bWVudC1jYXJkcyIsInBheW1lbnQtY2FyZHMvKiIsInBheW1lbnQtbWV0aG9kcyIsInBheW1lbnQtbWV0aG9kcy8qIiwicHJpdmF0ZS1sYWJlbC1hY2NvdW50cyIsInByaXZhdGUtbGFiZWwtYWNjb3VudHMvKiIsInRyYW5zYWN0aW9ucyIsInRyYW5zYWN0aW9ucy8qIiwiYXV0aG9yaXplcnMiLCJhdXRob3JpemVycy8qIl19LHsiY3JlYXRlZEF0IjoiMjAyMC0wNy0yM1QxNjoyODo0Mi44MTJaIiwidXBkYXRlZEF0IjoiMjAyMC0wNy0yM1QxNjoyODo0Mi44MTJaIiwiZGVuaWVkIjpbInBvc3QiXSwicmVzb3VyY2VzIjpbInVzZXJzLzppZC9jaGFuZ2UtcGFzc3dvcmQiXX1dLCJpYXQiOjE2NTcxMTYxNzEsImV4cCI6MTY1NzIwMjU3MSwic3ViIjoiZjJhMTIzYzktYmQxMi00MDRjLTgzYzctODNlMzg3MmFiNzZlIn0.xId4BoDU5JwkIi3fc1eMnTPfTAHTcot2v2mPKEWwNNg"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:44340/api/Users/3",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44340",
+							"path": [
+								"api",
+								"Users",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkIjoiZjJhMTIzYzktYmQxMi00MDRjLTgzYzctODNlMzg3MmFiNzZlIiwibmFtZSI6InMzYmFuayIsImNyZWF0ZWRCeSI6InNwYXJrLXRlYW0ifSwiY2xpZW50SWQiOiJmMmExMjNjOS1iZDEyLTQwNGMtODNjNy04M2UzODcyYWI3NmUiLCJwZXJtaXNzaW9ucyI6W3siY3JlYXRlZEF0IjoiMjAyMC0wNy0yM1QxNjoyODo0Mi44MTJaIiwidXBkYXRlZEF0IjoiMjAyMC0wNy0yM1QxNjoyODo0Mi44MTJaIiwiYWxsb3dlZCI6WyJnZXQiLCJwb3N0IiwicGF0Y2giLCJkZWxldGUiLCJvcHRpb25zIl0sInJlc291cmNlcyI6WyJhY2NvdW50cyIsImFjY291bnRzLyoiLCJwYXltZW50LWFjY291bnRzIiwicGF5bWVudC1hY2NvdW50cy8qIiwicGF5bWVudC1jYXJkcyIsInBheW1lbnQtY2FyZHMvKiIsInBheW1lbnQtbWV0aG9kcyIsInBheW1lbnQtbWV0aG9kcy8qIiwicHJpdmF0ZS1sYWJlbC1hY2NvdW50cyIsInByaXZhdGUtbGFiZWwtYWNjb3VudHMvKiIsInRyYW5zYWN0aW9ucyIsInRyYW5zYWN0aW9ucy8qIiwiYXV0aG9yaXplcnMiLCJhdXRob3JpemVycy8qIl19LHsiY3JlYXRlZEF0IjoiMjAyMC0wNy0yM1QxNjoyODo0Mi44MTJaIiwidXBkYXRlZEF0IjoiMjAyMC0wNy0yM1QxNjoyODo0Mi44MTJaIiwiZGVuaWVkIjpbInBvc3QiXSwicmVzb3VyY2VzIjpbInVzZXJzLzppZC9jaGFuZ2UtcGFzc3dvcmQiXX1dLCJpYXQiOjE2NTcxMTYxNzEsImV4cCI6MTY1NzIwMjU3MSwic3ViIjoiZjJhMTIzYzktYmQxMi00MDRjLTgzYzctODNlMzg3MmFiNzZlIn0.xId4BoDU5JwkIi3fc1eMnTPfTAHTcot2v2mPKEWwNNg"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nome\": \"teste\",\r\n  \"email\": \"email@email.com\",\r\n  \"password\": \"Senha123\",\r\n  \"dataNascimento\": \"2000-04-10T00:00:00\",\r\n  \"sexo\": 0\r\n  \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44340/api/Users",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44340",
+							"path": [
+								"api",
+								"Users"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Address",
+			"item": [
+				{
+					"name": "Get All Address",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkIjoiZjJhMTIzYzktYmQxMi00MDRjLTgzYzctODNlMzg3MmFiNzZlIiwibmFtZSI6InMzYmFuayIsImNyZWF0ZWRCeSI6InNwYXJrLXRlYW0ifSwiY2xpZW50SWQiOiJmMmExMjNjOS1iZDEyLTQwNGMtODNjNy04M2UzODcyYWI3NmUiLCJwZXJtaXNzaW9ucyI6W3siY3JlYXRlZEF0IjoiMjAyMC0wNy0yM1QxNjoyODo0Mi44MTJaIiwidXBkYXRlZEF0IjoiMjAyMC0wNy0yM1QxNjoyODo0Mi44MTJaIiwiYWxsb3dlZCI6WyJnZXQiLCJwb3N0IiwicGF0Y2giLCJkZWxldGUiLCJvcHRpb25zIl0sInJlc291cmNlcyI6WyJhY2NvdW50cyIsImFjY291bnRzLyoiLCJwYXltZW50LWFjY291bnRzIiwicGF5bWVudC1hY2NvdW50cy8qIiwicGF5bWVudC1jYXJkcyIsInBheW1lbnQtY2FyZHMvKiIsInBheW1lbnQtbWV0aG9kcyIsInBheW1lbnQtbWV0aG9kcy8qIiwicHJpdmF0ZS1sYWJlbC1hY2NvdW50cyIsInByaXZhdGUtbGFiZWwtYWNjb3VudHMvKiIsInRyYW5zYWN0aW9ucyIsInRyYW5zYWN0aW9ucy8qIiwiYXV0aG9yaXplcnMiLCJhdXRob3JpemVycy8qIl19LHsiY3JlYXRlZEF0IjoiMjAyMC0wNy0yM1QxNjoyODo0Mi44MTJaIiwidXBkYXRlZEF0IjoiMjAyMC0wNy0yM1QxNjoyODo0Mi44MTJaIiwiZGVuaWVkIjpbInBvc3QiXSwicmVzb3VyY2VzIjpbInVzZXJzLzppZC9jaGFuZ2UtcGFzc3dvcmQiXX1dLCJpYXQiOjE2NTcxMTYxNzEsImV4cCI6MTY1NzIwMjU3MSwic3ViIjoiZjJhMTIzYzktYmQxMi00MDRjLTgzYzctODNlMzg3MmFiNzZlIn0.xId4BoDU5JwkIi3fc1eMnTPfTAHTcot2v2mPKEWwNNg"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:44340/api/address",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44340",
+							"path": [
+								"api",
+								"address"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get ID Address",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkIjoiZjJhMTIzYzktYmQxMi00MDRjLTgzYzctODNlMzg3MmFiNzZlIiwibmFtZSI6InMzYmFuayIsImNyZWF0ZWRCeSI6InNwYXJrLXRlYW0ifSwiY2xpZW50SWQiOiJmMmExMjNjOS1iZDEyLTQwNGMtODNjNy04M2UzODcyYWI3NmUiLCJwZXJtaXNzaW9ucyI6W3siY3JlYXRlZEF0IjoiMjAyMC0wNy0yM1QxNjoyODo0Mi44MTJaIiwidXBkYXRlZEF0IjoiMjAyMC0wNy0yM1QxNjoyODo0Mi44MTJaIiwiYWxsb3dlZCI6WyJnZXQiLCJwb3N0IiwicGF0Y2giLCJkZWxldGUiLCJvcHRpb25zIl0sInJlc291cmNlcyI6WyJhY2NvdW50cyIsImFjY291bnRzLyoiLCJwYXltZW50LWFjY291bnRzIiwicGF5bWVudC1hY2NvdW50cy8qIiwicGF5bWVudC1jYXJkcyIsInBheW1lbnQtY2FyZHMvKiIsInBheW1lbnQtbWV0aG9kcyIsInBheW1lbnQtbWV0aG9kcy8qIiwicHJpdmF0ZS1sYWJlbC1hY2NvdW50cyIsInByaXZhdGUtbGFiZWwtYWNjb3VudHMvKiIsInRyYW5zYWN0aW9ucyIsInRyYW5zYWN0aW9ucy8qIiwiYXV0aG9yaXplcnMiLCJhdXRob3JpemVycy8qIl19LHsiY3JlYXRlZEF0IjoiMjAyMC0wNy0yM1QxNjoyODo0Mi44MTJaIiwidXBkYXRlZEF0IjoiMjAyMC0wNy0yM1QxNjoyODo0Mi44MTJaIiwiZGVuaWVkIjpbInBvc3QiXSwicmVzb3VyY2VzIjpbInVzZXJzLzppZC9jaGFuZ2UtcGFzc3dvcmQiXX1dLCJpYXQiOjE2NTcxMTYxNzEsImV4cCI6MTY1NzIwMjU3MSwic3ViIjoiZjJhMTIzYzktYmQxMi00MDRjLTgzYzctODNlMzg3MmFiNzZlIn0.xId4BoDU5JwkIi3fc1eMnTPfTAHTcot2v2mPKEWwNNg"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:44340/api/Address/3",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44340",
+							"path": [
+								"api",
+								"Address",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get ID Address UserID",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkIjoiZjJhMTIzYzktYmQxMi00MDRjLTgzYzctODNlMzg3MmFiNzZlIiwibmFtZSI6InMzYmFuayIsImNyZWF0ZWRCeSI6InNwYXJrLXRlYW0ifSwiY2xpZW50SWQiOiJmMmExMjNjOS1iZDEyLTQwNGMtODNjNy04M2UzODcyYWI3NmUiLCJwZXJtaXNzaW9ucyI6W3siY3JlYXRlZEF0IjoiMjAyMC0wNy0yM1QxNjoyODo0Mi44MTJaIiwidXBkYXRlZEF0IjoiMjAyMC0wNy0yM1QxNjoyODo0Mi44MTJaIiwiYWxsb3dlZCI6WyJnZXQiLCJwb3N0IiwicGF0Y2giLCJkZWxldGUiLCJvcHRpb25zIl0sInJlc291cmNlcyI6WyJhY2NvdW50cyIsImFjY291bnRzLyoiLCJwYXltZW50LWFjY291bnRzIiwicGF5bWVudC1hY2NvdW50cy8qIiwicGF5bWVudC1jYXJkcyIsInBheW1lbnQtY2FyZHMvKiIsInBheW1lbnQtbWV0aG9kcyIsInBheW1lbnQtbWV0aG9kcy8qIiwicHJpdmF0ZS1sYWJlbC1hY2NvdW50cyIsInByaXZhdGUtbGFiZWwtYWNjb3VudHMvKiIsInRyYW5zYWN0aW9ucyIsInRyYW5zYWN0aW9ucy8qIiwiYXV0aG9yaXplcnMiLCJhdXRob3JpemVycy8qIl19LHsiY3JlYXRlZEF0IjoiMjAyMC0wNy0yM1QxNjoyODo0Mi44MTJaIiwidXBkYXRlZEF0IjoiMjAyMC0wNy0yM1QxNjoyODo0Mi44MTJaIiwiZGVuaWVkIjpbInBvc3QiXSwicmVzb3VyY2VzIjpbInVzZXJzLzppZC9jaGFuZ2UtcGFzc3dvcmQiXX1dLCJpYXQiOjE2NTcxMTYxNzEsImV4cCI6MTY1NzIwMjU3MSwic3ViIjoiZjJhMTIzYzktYmQxMi00MDRjLTgzYzctODNlMzg3MmFiNzZlIn0.xId4BoDU5JwkIi3fc1eMnTPfTAHTcot2v2mPKEWwNNg"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:44340/api/address/user/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44340",
+							"path": [
+								"api",
+								"address",
+								"user",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Address",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkIjoiZjJhMTIzYzktYmQxMi00MDRjLTgzYzctODNlMzg3MmFiNzZlIiwibmFtZSI6InMzYmFuayIsImNyZWF0ZWRCeSI6InNwYXJrLXRlYW0ifSwiY2xpZW50SWQiOiJmMmExMjNjOS1iZDEyLTQwNGMtODNjNy04M2UzODcyYWI3NmUiLCJwZXJtaXNzaW9ucyI6W3siY3JlYXRlZEF0IjoiMjAyMC0wNy0yM1QxNjoyODo0Mi44MTJaIiwidXBkYXRlZEF0IjoiMjAyMC0wNy0yM1QxNjoyODo0Mi44MTJaIiwiYWxsb3dlZCI6WyJnZXQiLCJwb3N0IiwicGF0Y2giLCJkZWxldGUiLCJvcHRpb25zIl0sInJlc291cmNlcyI6WyJhY2NvdW50cyIsImFjY291bnRzLyoiLCJwYXltZW50LWFjY291bnRzIiwicGF5bWVudC1hY2NvdW50cy8qIiwicGF5bWVudC1jYXJkcyIsInBheW1lbnQtY2FyZHMvKiIsInBheW1lbnQtbWV0aG9kcyIsInBheW1lbnQtbWV0aG9kcy8qIiwicHJpdmF0ZS1sYWJlbC1hY2NvdW50cyIsInByaXZhdGUtbGFiZWwtYWNjb3VudHMvKiIsInRyYW5zYWN0aW9ucyIsInRyYW5zYWN0aW9ucy8qIiwiYXV0aG9yaXplcnMiLCJhdXRob3JpemVycy8qIl19LHsiY3JlYXRlZEF0IjoiMjAyMC0wNy0yM1QxNjoyODo0Mi44MTJaIiwidXBkYXRlZEF0IjoiMjAyMC0wNy0yM1QxNjoyODo0Mi44MTJaIiwiZGVuaWVkIjpbInBvc3QiXSwicmVzb3VyY2VzIjpbInVzZXJzLzppZC9jaGFuZ2UtcGFzc3dvcmQiXX1dLCJpYXQiOjE2NTcxMTYxNzEsImV4cCI6MTY1NzIwMjU3MSwic3ViIjoiZjJhMTIzYzktYmQxMi00MDRjLTgzYzctODNlMzg3MmFiNzZlIn0.xId4BoDU5JwkIi3fc1eMnTPfTAHTcot2v2mPKEWwNNg"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 3,\r\n    \"cep\": \"23912-005\",\r\n    \"logradouro\": \"Rua Legal\",\r\n    \"numero\": \"123\",\r\n    \"complemento\": \"Apto 101\",\r\n    \"bairro\": \"Centro\",\r\n    \"cidade\": \"São Paulo\",\r\n    \"uf\": \"SP\",\r\n    \"userId\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44340/api/Address/3",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44340",
+							"path": [
+								"api",
+								"Address",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Address",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkIjoiZjJhMTIzYzktYmQxMi00MDRjLTgzYzctODNlMzg3MmFiNzZlIiwibmFtZSI6InMzYmFuayIsImNyZWF0ZWRCeSI6InNwYXJrLXRlYW0ifSwiY2xpZW50SWQiOiJmMmExMjNjOS1iZDEyLTQwNGMtODNjNy04M2UzODcyYWI3NmUiLCJwZXJtaXNzaW9ucyI6W3siY3JlYXRlZEF0IjoiMjAyMC0wNy0yM1QxNjoyODo0Mi44MTJaIiwidXBkYXRlZEF0IjoiMjAyMC0wNy0yM1QxNjoyODo0Mi44MTJaIiwiYWxsb3dlZCI6WyJnZXQiLCJwb3N0IiwicGF0Y2giLCJkZWxldGUiLCJvcHRpb25zIl0sInJlc291cmNlcyI6WyJhY2NvdW50cyIsImFjY291bnRzLyoiLCJwYXltZW50LWFjY291bnRzIiwicGF5bWVudC1hY2NvdW50cy8qIiwicGF5bWVudC1jYXJkcyIsInBheW1lbnQtY2FyZHMvKiIsInBheW1lbnQtbWV0aG9kcyIsInBheW1lbnQtbWV0aG9kcy8qIiwicHJpdmF0ZS1sYWJlbC1hY2NvdW50cyIsInByaXZhdGUtbGFiZWwtYWNjb3VudHMvKiIsInRyYW5zYWN0aW9ucyIsInRyYW5zYWN0aW9ucy8qIiwiYXV0aG9yaXplcnMiLCJhdXRob3JpemVycy8qIl19LHsiY3JlYXRlZEF0IjoiMjAyMC0wNy0yM1QxNjoyODo0Mi44MTJaIiwidXBkYXRlZEF0IjoiMjAyMC0wNy0yM1QxNjoyODo0Mi44MTJaIiwiZGVuaWVkIjpbInBvc3QiXSwicmVzb3VyY2VzIjpbInVzZXJzLzppZC9jaGFuZ2UtcGFzc3dvcmQiXX1dLCJpYXQiOjE2NTcxMTYxNzEsImV4cCI6MTY1NzIwMjU3MSwic3ViIjoiZjJhMTIzYzktYmQxMi00MDRjLTgzYzctODNlMzg3MmFiNzZlIn0.xId4BoDU5JwkIi3fc1eMnTPfTAHTcot2v2mPKEWwNNg"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "https://localhost:44340/api/Address/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44340",
+							"path": [
+								"api",
+								"Address",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post Address",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7ImlkIjoiZjJhMTIzYzktYmQxMi00MDRjLTgzYzctODNlMzg3MmFiNzZlIiwibmFtZSI6InMzYmFuayIsImNyZWF0ZWRCeSI6InNwYXJrLXRlYW0ifSwiY2xpZW50SWQiOiJmMmExMjNjOS1iZDEyLTQwNGMtODNjNy04M2UzODcyYWI3NmUiLCJwZXJtaXNzaW9ucyI6W3siY3JlYXRlZEF0IjoiMjAyMC0wNy0yM1QxNjoyODo0Mi44MTJaIiwidXBkYXRlZEF0IjoiMjAyMC0wNy0yM1QxNjoyODo0Mi44MTJaIiwiYWxsb3dlZCI6WyJnZXQiLCJwb3N0IiwicGF0Y2giLCJkZWxldGUiLCJvcHRpb25zIl0sInJlc291cmNlcyI6WyJhY2NvdW50cyIsImFjY291bnRzLyoiLCJwYXltZW50LWFjY291bnRzIiwicGF5bWVudC1hY2NvdW50cy8qIiwicGF5bWVudC1jYXJkcyIsInBheW1lbnQtY2FyZHMvKiIsInBheW1lbnQtbWV0aG9kcyIsInBheW1lbnQtbWV0aG9kcy8qIiwicHJpdmF0ZS1sYWJlbC1hY2NvdW50cyIsInByaXZhdGUtbGFiZWwtYWNjb3VudHMvKiIsInRyYW5zYWN0aW9ucyIsInRyYW5zYWN0aW9ucy8qIiwiYXV0aG9yaXplcnMiLCJhdXRob3JpemVycy8qIl19LHsiY3JlYXRlZEF0IjoiMjAyMC0wNy0yM1QxNjoyODo0Mi44MTJaIiwidXBkYXRlZEF0IjoiMjAyMC0wNy0yM1QxNjoyODo0Mi44MTJaIiwiZGVuaWVkIjpbInBvc3QiXSwicmVzb3VyY2VzIjpbInVzZXJzLzppZC9jaGFuZ2UtcGFzc3dvcmQiXX1dLCJpYXQiOjE2NTcxMTYxNzEsImV4cCI6MTY1NzIwMjU3MSwic3ViIjoiZjJhMTIzYzktYmQxMi00MDRjLTgzYzctODNlMzg3MmFiNzZlIn0.xId4BoDU5JwkIi3fc1eMnTPfTAHTcot2v2mPKEWwNNg"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cep\": \"23912-005\",\r\n    \"logradouro\": \"Rua Legal\",\r\n    \"numero\": \"265\",\r\n    \"complemento\": \"\",\r\n    \"bairro\": \"Centro\",\r\n    \"cidade\": \"São Paulo\",\r\n    \"uf\": \"SP\",\r\n    \"userId\": 5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44340/api/Address",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44340",
+							"path": [
+								"api",
+								"Address"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login Token",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Adicionando Tokens na Global Variable\", () => {\r",
+							"    const response = pm.response.json();\r",
+							"    pm.globals.set(\"token\", response.token);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"admin@example.com\",\r\n  \"password\": \"AdminPassword123!\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44340/api/Auth/login",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44340",
+					"path": [
+						"api",
+						"Auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "inherit"
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
